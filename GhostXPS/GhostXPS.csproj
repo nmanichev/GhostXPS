@@ -3,11 +3,23 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <ApplicationIcon>ghostscript_logo.ico</ApplicationIcon>
+    <Authors>Nikita Manichev</Authors>
+    <Description>.NET Standard simple XPS to PDF converter using GhostXPS utility.</Description>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/nmanichev/GhostXPS</PackageProjectUrl>
+    <PackageIcon>ghostscript_logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/nmanichev/GhostXPS</RepositoryUrl>
+    <PackageTags>ghost ghostscripts xps pdf</PackageTags>
+    <RepositoryType>Github</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>false</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Utilities\LICENSE" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="Utilities\COPYING">
@@ -28,8 +40,13 @@
     <None Update="Utilities\gxpswin64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Utilities\LICENSE">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="C:\Users\Nikita\Downloads\ghostscript_logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
