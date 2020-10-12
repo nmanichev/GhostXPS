@@ -1,5 +1,5 @@
 # GhostXPS
-.NET Standard library that implement simple XPS to PDF convertion using GhostXPS utility.
+.NET Standard simple XPS to PDF converter using GhostXPS utility.
 
 ## Table of contents
 * [Table of Contents](#table-of-contents)
