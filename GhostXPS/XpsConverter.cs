@@ -4,8 +4,15 @@ using System.IO;
 
 namespace GhostXPS
 {
+    /// <summary>
+    /// Converts XPS into PDF.
+    /// </summary>
     public static class XpsConverter
     {
+        /// <summary>
+        /// Gets XPS file converts into PDF file at the same location.
+        /// </summary>
+        /// <param name="xpsFilePath">XPS file path.</param>
         public static void Convert(string xpsFilePath)
         {
             if (string.IsNullOrEmpty(xpsFilePath))
@@ -18,6 +25,11 @@ namespace GhostXPS
             Convert(xpsFilePath, pdfFilePath);
         }
 
+        /// <summary>
+        /// Converts XPS file to PDF using provided pathes.
+        /// </summary>
+        /// <param name="xpsFilePath">XPS file path.</param>
+        /// <param name="pdfFilePath">PDF file path.</param>
         public static void Convert(string xpsFilePath, string pdfFilePath)
         {
             if (string.IsNullOrEmpty(xpsFilePath))

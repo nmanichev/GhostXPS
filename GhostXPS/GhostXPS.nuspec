@@ -8,26 +8,33 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">GPL-3.0-or-later</license>
     <projectUrl>https://github.com/nmanichev/GhostXPS</projectUrl>
-    <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
-    <description>.NET Standard simple XPS to PDF converter using GhostXPS utility</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>$copyright$</copyright>
-    <tags>Tag1 Tag2</tags>
+    <icon>content\netstandard2.1\GhostXPS.png</icon>
+    <description>.NET Standard simple XPS to PDF converter using GhostXPS utility.</description>
+    <copyright>Copyright © 2020</copyright>
+    <tags>Ghost XPS PDF</tags>
+    <dependencies>
+      <group targetFramework="netstandard2.1" />
+    </dependencies>
   </metadata>
 
   <files>
-    <file src="..\bin\x64\Release\netstandard2.1\*" target="runtimes\win10-x64\lib\netstandard2.1" />
-    <file src="..\bin\x64\Release\netstandard2.1\Utilities\gxpsdll64.dll" target="runtimes\win10-x64\lib\netstandard2.1" />
-    <file src="..\bin\x64\Release\netstandard2.1\Utilities\gxpswin64.exe" target="runtimes\win10-x64\lib\netstandard2.1" />
-    <file src="..\bin\x64\Release\netstandard2.1\Utilities\COPYING" target="runtimes\win10-x64\lib\netstandard2.1" />
-    <file src="..\bin\x64\Release\netstandard2.1\Utilities\COPYING.APFL" target="runtimes\win10-x64\lib\netstandard2.1" />
-    <file src="..\bin\x64\Release\netstandard2.1\Utilities\LICENSE" target="runtimes\win10-x64\lib\netstandard2.1" />
-
-    <file src="..\bin\x86\Release\netstandard2.1\*" target="runtimes\win10-x86\lib\netstandard2.1" />
-    <file src="..\bin\x86\Release\netstandard2.1\Utilities\gxpsdll32.dll" target="runtimes\win10-x86\lib\netstandard2.1" />
-    <file src="..\bin\x86\Release\netstandard2.1\Utilities\gxpswin32.exe" target="runtimes\win10-x86\lib\netstandard2.1" />
-    <file src="..\bin\x86\Release\netstandard2.1\Utilities\COPYING" target="runtimes\win10-x86\lib\netstandard2.1" />
-    <file src="..\bin\x86\Release\netstandard2.1\Utilities\COPYING.APFL" target="runtimes\win10-x86\lib\netstandard2.1" />
-    <file src="..\bin\x86\Release\netstandard2.1\Utilities\LICENSE" target="runtimes\win10-x86\lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\*.*" target="lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\Utilities\*.*" target="lib\netstandard2.1\Utilities" />
+    
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\Resources\GhostXPS.png" target="content\netstandard2.1" />
+    
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\*.*" target="runtimes\win10-x64\lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\Utilities\gxpsdll64.dll" target="runtimes\win10-x64\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\Utilities\gxpswin64.exe" target="runtimes\win10-x64\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\Utilities\COPYING.md" target="runtimes\win10-x64\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\Utilities\COPYING.AFPL.md" target="runtimes\win10-x64\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x64\Release\netstandard2.1\Utilities\LICENSE.md" target="runtimes\win10-x64\lib\netstandard2.1\Utilities" />
+    
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\*.*" target="runtimes\win10-x86\lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\Utilities\gxpsdll32.dll" target="runtimes\win10-x86\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\Utilities\gxpswin32.exe" target="runtimes\win10-x86\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\Utilities\COPYING.md" target="runtimes\win10-x86\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\Utilities\COPYING.AFPL.md" target="runtimes\win10-x86\lib\netstandard2.1\Utilities" />
+    <file src="..\GhostXPS\bin\x86\Release\netstandard2.1\Utilities\LICENSE.md" target="runtimes\win10-x86\lib\netstandard2.1\Utilities" />
   </files>
 </package>

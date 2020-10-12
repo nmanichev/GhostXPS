@@ -3,6 +3,9 @@ using System.Runtime.Serialization;
 
 namespace GhostXPS
 {
+    /// <summary>
+    /// XPS converter exception.
+    /// </summary>
     public class XpsConverterException : Exception
     {
         /// <summary>

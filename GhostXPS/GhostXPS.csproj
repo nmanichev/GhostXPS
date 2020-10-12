@@ -6,14 +6,15 @@
     <Authors>Nikita Manichev</Authors>
     <Description>.NET Standard simple XPS to PDF converter using GhostXPS utility.</Description>
     <PackageLicenseFile></PackageLicenseFile>
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageIcon></PackageIcon>
-    <RepositoryUrl></RepositoryUrl>
-    <PackageTags></PackageTags>
-    <RepositoryType></RepositoryType>
+    <PackageProjectUrl>https://github.com/nmanichev/GhostXPS</PackageProjectUrl>
+    <PackageIcon>GhostXPS.png</PackageIcon>
+    <RepositoryUrl>https://github.com/nmanichev/GhostXPS</RepositoryUrl>
+    <PackageTags>Ghost XPS PDF</PackageTags>
+    <RepositoryType>git</RepositoryType>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright>Copyright © 2020</Copyright>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
@@ -25,10 +26,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Utilities\COPYING">
+    <None Update="Utilities\COPYING.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Utilities\COPYING.AFPL">
+    <None Update="Utilities\COPYING.AFPL.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\gxpsdll32.dll">
@@ -43,7 +44,12 @@
     <None Update="Utilities\gxpswin64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Utilities\LICENSE">
+    <None Update="Utilities\LICENSE.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\GhostXPS.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
