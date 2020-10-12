@@ -9,12 +9,13 @@
     <PackageProjectUrl>https://github.com/nmanichev/GhostXPS</PackageProjectUrl>
     <PackageIcon>GhostXPS.png</PackageIcon>
     <RepositoryUrl>https://github.com/nmanichev/GhostXPS</RepositoryUrl>
-    <PackageTags>Ghost XPS PDF</PackageTags>
+    <PackageTags>Ghost Ghostscript XPS PDF</PackageTags>
     <RepositoryType>git</RepositoryType>
     <Platforms>AnyCPU;x64;x86</Platforms>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright>Copyright © 2020</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
@@ -27,25 +28,25 @@
 
   <ItemGroup>
     <None Update="Utilities\COPYING.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\COPYING.AFPL.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\gxpsdll32.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\gxpsdll64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\gxpswin32.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\gxpswin64.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="Utilities\LICENSE.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Include="Resources\GhostXPS.png">
       <Pack>True</Pack>
