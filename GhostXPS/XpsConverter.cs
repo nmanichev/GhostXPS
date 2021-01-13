@@ -45,7 +45,7 @@ namespace GhostXPS
             var ghostStartInfo = new ProcessStartInfo
             {
                 WorkingDirectory = Environment.CurrentDirectory,
-                FileName = Environment.Is64BitOperatingSystem ? "gxpswin64.exe" : "gxpswin32.exe",
+                FileName = Environment.Is64BitOperatingSystem ? "Utilities\\gxpswin64.exe" : "Utilities\\gxpswin32.exe",
                 Arguments = $"-dNOPAUSE -dBATCH -dSAFER -sOutputFile={pdfFilePath} -sDEVICE=pdfwrite  {xpsFilePath}",
                 CreateNoWindow = true,
                 UseShellExecute = false,
