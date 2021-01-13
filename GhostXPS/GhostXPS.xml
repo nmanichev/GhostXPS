@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GhostXPS</name>
+    </assembly>
+    <members>
+        <member name="T:GhostXPS.XpsConverter">
+            <summary>
+            Converts XPS into PDF.
+            </summary>
+        </member>
+        <member name="M:GhostXPS.XpsConverter.Convert(System.String)">
+            <summary>
+            Gets XPS file converts into PDF file at the same location.
+            </summary>
+            <param name="xpsFilePath">XPS file path.</param>
+        </member>
+        <member name="M:GhostXPS.XpsConverter.Convert(System.String,System.String)">
+            <summary>
+            Converts XPS file to PDF using provided pathes.
+            </summary>
+            <param name="xpsFilePath">XPS file path.</param>
+            <param name="pdfFilePath">PDF file path.</param>
+        </member>
+        <member name="T:GhostXPS.XpsConverterException">
+            <summary>
+            XPS converter exception.
+            </summary>
+        </member>
+        <member name="M:GhostXPS.XpsConverterException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GhostXPS.XpsConverterException"/> class.
+            </summary>
+        </member>
+        <member name="M:GhostXPS.XpsConverterException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GhostXPS.XpsConverterException"/> class.
+            </summary>
+            <param name="message">Exception message.</param>
+        </member>
+        <member name="M:GhostXPS.XpsConverterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GhostXPS.XpsConverterException"/> class.
+            </summary>
+            <param name="message">Exception message.</param>
+            <param name="innerException">Inner exception <see cref="T:System.Exception"/>.</param>
+        </member>
+        <member name="M:GhostXPS.XpsConverterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GhostXPS.XpsConverterException"/> class.
+            </summary>
+            <param name="info">Serialization information <see cref="T:System.Runtime.Serialization.SerializationInfo"/>.</param>
+            <param name="context">Streaming context <see cref="T:System.Runtime.Serialization.StreamingContext"/>.</param>
+        </member>
+    </members>
+</doc>

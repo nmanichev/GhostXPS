@@ -26,6 +26,10 @@
     <Optimize>false</Optimize>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>GhostXPS.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Update="Utilities\COPYING.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
