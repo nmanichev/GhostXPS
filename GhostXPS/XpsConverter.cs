@@ -46,7 +46,7 @@ namespace GhostXPS
             {
                 WorkingDirectory = Environment.CurrentDirectory,
                 FileName = Environment.Is64BitOperatingSystem ? "Utilities\\gxpswin64.exe" : "Utilities\\gxpswin32.exe",
-                Arguments = $"-dNOPAUSE -dBATCH -dSAFER -sOutputFile={pdfFilePath} -sDEVICE=pdfwrite  {xpsFilePath}",
+                Arguments = $"-dNOPAUSE -dBATCH -dSAFER -sOutputFile=\"{pdfFilePath}\" -sDEVICE=pdfwrite \"{xpsFilePath}\"",
                 CreateNoWindow = true,
                 UseShellExecute = false,
                 RedirectStandardError = true
