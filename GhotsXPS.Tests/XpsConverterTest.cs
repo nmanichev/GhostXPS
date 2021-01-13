@@ -13,6 +13,8 @@ namespace GhotsXPS.Tests
             File.Delete("Resources\\analysis.pdf");
 
             File.Delete("Resources\\tiger.pdf");
+
+            File.Delete("Resources\\file with spaces.pdf");
         }
 
         [Test]
@@ -35,6 +37,18 @@ namespace GhotsXPS.Tests
             var pdfFilePath = "Resources\\tiger.pdf";
 
             XpsConverter.Convert(xpsFilePath, pdfFilePath);
+
+            Assert.That(pdfFilePath, Does.Exist);
+        }
+
+        [Test]
+        public void TestConvertFileWithSpacesInPath()
+        {
+            var xpsFilePath = "Resources\\file with spaces.xps";
+
+            var pdfFilePath = "Resources\\file with spaces.pdf";
+
+            XpsConverter.Convert(xpsFilePath);
 
             Assert.That(pdfFilePath, Does.Exist);
         }

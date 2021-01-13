@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\file with spaces.xps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\analysis.xps">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
