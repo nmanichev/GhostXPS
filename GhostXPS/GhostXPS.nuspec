@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GhostXPS</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>GhostXPS</title>
     <authors>Nikita Manichev</authors>
     <owners>Nikita Manichev</owners>
@@ -11,7 +11,7 @@
     <projectUrl>https://github.com/nmanichev/GhostXPS</projectUrl>
     <icon>Resources\GhostXPS.png</icon>
     <description>.NET Standard simple XPS to PDF converter using GhostXPS utility.</description>
-    <copyright>Copyright © 2020</copyright>
+    <copyright>Copyright © 2020 - 2021</copyright>
     <tags>Ghost Ghostscript XPS PDF</tags>
     <dependencies>
       <group targetFramework="netstandard2.1" />
@@ -19,9 +19,9 @@
   </metadata>
 
   <files>
-    <file src="..\GhostXPS\Resources\GhostXPS.png" target="Resources\"/>
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\Resources\GhostXPS.png" target="Resources\"/>
     
-    <file src="..\GhostXPS\bin\Debug\netstandard2.1\*.*" target="lib\netstandard2.1" />
-    <file src="..\GhostXPS\Utilities\*.*" target="lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\*.*" target="lib\netstandard2.1" />
+    <file src="..\GhostXPS\bin\Release\netstandard2.1\Utilities\*.*" target="lib\netstandard2.1" />
   </files>
 </package>
