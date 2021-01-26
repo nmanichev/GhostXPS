@@ -1,6 +1,7 @@
 using GhostXPS;
 using NUnit.Framework;
 using System;
+using System.ComponentModel;
 using System.IO;
 
 namespace GhotsXPS.Tests
@@ -24,7 +25,9 @@ namespace GhotsXPS.Tests
 
             var pdfFilePath = "Resources\\analysis.pdf";
 
-            XpsConverter.Convert(xpsFilePath);
+            var utilitiesPath = "Utilities\\";
+
+            XpsConverter.Convert(xpsFilePath, utilitiesPath);
 
             Assert.That(pdfFilePath, Does.Exist);
         }
@@ -36,7 +39,9 @@ namespace GhotsXPS.Tests
 
             var pdfFilePath = "Resources\\tiger.pdf";
 
-            XpsConverter.Convert(xpsFilePath, pdfFilePath);
+            var utilitiesPath = "Utilities\\";
+
+            XpsConverter.Convert(xpsFilePath, pdfFilePath, utilitiesPath);
 
             Assert.That(pdfFilePath, Does.Exist);
         }
@@ -48,9 +53,21 @@ namespace GhotsXPS.Tests
 
             var pdfFilePath = "Resources\\file with spaces.pdf";
 
-            XpsConverter.Convert(xpsFilePath);
+            var utilitiesPath = "Utilities\\";
+
+            XpsConverter.Convert(xpsFilePath, utilitiesPath);
 
             Assert.That(pdfFilePath, Does.Exist);
+        }
+
+        [Test]
+        public void TestCantFindUtilities()
+        {
+            var xpsFilePath = "Resources\\analysis.xps";
+
+            var exception = Assert.Throws<Win32Exception>(() => XpsConverter.Convert(xpsFilePath));
+
+            StringAssert.Contains($"The system cannot find the file specified.", exception.Message);
         }
 
         [Test]
@@ -58,7 +75,9 @@ namespace GhotsXPS.Tests
         {
             var xpsFilePath = "Resources\\wrong.xps";
 
-            var exception = Assert.Throws<XpsConverterException>(() => XpsConverter.Convert(xpsFilePath));
+            var utilitiesPath = "Utilities\\";
+
+            var exception = Assert.Throws<XpsConverterException>(() => XpsConverter.Convert(xpsFilePath, utilitiesPath));
 
             StringAssert.Contains($"Failed to open file '{xpsFilePath}'", exception.Message);
         }
@@ -66,7 +85,9 @@ namespace GhotsXPS.Tests
         [Test]
         public void TestXpsNotEmpty()
         {
-            var exception = Assert.Throws<ArgumentNullException>(() => XpsConverter.Convert(string.Empty));
+            var utilitiesPath = "Utilities\\";
+
+            var exception = Assert.Throws<ArgumentNullException>(() => XpsConverter.Convert(string.Empty, utilitiesPath));
 
             StringAssert.Contains("Xps file path can't be empty. Please, specify a valid xps file path.", exception.Message);
         }
@@ -76,7 +97,9 @@ namespace GhotsXPS.Tests
         {
             var xpsFilePath = "Resources\\tiger.xps";
 
-            var exception = Assert.Throws<ArgumentNullException>(() => XpsConverter.Convert(xpsFilePath, null));
+            var utilitiesPath = "Utilities\\";
+
+            var exception = Assert.Throws<ArgumentNullException>(() => XpsConverter.Convert(xpsFilePath, null, utilitiesPath));
 
             StringAssert.Contains("Pdf file path can't be empty. Please, specify a valid pdf file path.", exception.Message);
         }

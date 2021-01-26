@@ -13,7 +13,8 @@ namespace GhostXPS
         /// Gets XPS file converts into PDF file at the same location.
         /// </summary>
         /// <param name="xpsFilePath">XPS file path.</param>
-        public static void Convert(string xpsFilePath)
+        /// <param name="utilitiesPath">Path ghost xps utilities.</param>
+        public static void Convert(string xpsFilePath, string utilitiesPath = null)
         {
             if (string.IsNullOrEmpty(xpsFilePath))
             {
@@ -22,7 +23,7 @@ namespace GhostXPS
 
             var pdfFilePath = Path.Combine(Path.GetDirectoryName(xpsFilePath), $"{Path.GetFileNameWithoutExtension(xpsFilePath)}.pdf");
 
-            Convert(xpsFilePath, pdfFilePath);
+            Convert(xpsFilePath, pdfFilePath, utilitiesPath);
         }
 
         /// <summary>
@@ -30,7 +31,8 @@ namespace GhostXPS
         /// </summary>
         /// <param name="xpsFilePath">XPS file path.</param>
         /// <param name="pdfFilePath">PDF file path.</param>
-        public static void Convert(string xpsFilePath, string pdfFilePath)
+        /// <param name="utilitiesPath">Path ghost xps utilities.</param>
+        public static void Convert(string xpsFilePath, string pdfFilePath, string utilitiesPath = null)
         {
             if (string.IsNullOrEmpty(xpsFilePath))
             {
@@ -45,7 +47,7 @@ namespace GhostXPS
             var ghostStartInfo = new ProcessStartInfo
             {
                 WorkingDirectory = Environment.CurrentDirectory,
-                FileName = Environment.Is64BitOperatingSystem ? "Utilities\\gxpswin64.exe" : "Utilities\\gxpswin32.exe",
+                FileName = Environment.Is64BitOperatingSystem ? $"{utilitiesPath}gxpswin64.exe" : $"{utilitiesPath}gxpswin32.exe",
                 Arguments = $"-dNOPAUSE -dBATCH -dSAFER -sOutputFile=\"{pdfFilePath}\" -sDEVICE=pdfwrite \"{xpsFilePath}\"",
                 CreateNoWindow = true,
                 UseShellExecute = false,

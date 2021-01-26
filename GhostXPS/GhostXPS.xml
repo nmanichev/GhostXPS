@@ -9,18 +9,20 @@
             Converts XPS into PDF.
             </summary>
         </member>
-        <member name="M:GhostXPS.XpsConverter.Convert(System.String)">
+        <member name="M:GhostXPS.XpsConverter.Convert(System.String,System.String)">
             <summary>
             Gets XPS file converts into PDF file at the same location.
             </summary>
             <param name="xpsFilePath">XPS file path.</param>
+            <param name="utilitiesPath">Path ghost xps utilities.</param>
         </member>
-        <member name="M:GhostXPS.XpsConverter.Convert(System.String,System.String)">
+        <member name="M:GhostXPS.XpsConverter.Convert(System.String,System.String,System.String)">
             <summary>
             Converts XPS file to PDF using provided pathes.
             </summary>
             <param name="xpsFilePath">XPS file path.</param>
             <param name="pdfFilePath">PDF file path.</param>
+            <param name="utilitiesPath">Path ghost xps utilities.</param>
         </member>
         <member name="T:GhostXPS.XpsConverterException">
             <summary>
